@@ -7,7 +7,7 @@ load_dotenv()
 
 app = Flask(__name__)
 redis_client = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"))
-
+#redis_client = redis.Redis(host='localhost', port=6379)
 
 @app.route('/')
 def home():
