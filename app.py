@@ -19,7 +19,7 @@ def receive_task():
     print(task_data)
     # Publish task to Redis channel
     #redis_client.publish('tasks', json.dumps(task_data))
-    redis_client.lpush('tasks', task_data)
+    redis_client.lpush('tasks', json.dumps(task_data))
     if task_data:
         return 'Task received and sent to worker', 200 
     else:
