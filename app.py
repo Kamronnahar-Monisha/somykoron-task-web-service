@@ -3,7 +3,7 @@ import redis
 import json
 
 app = Flask(__name__)
-redis_client = redis.Redis(host='localhost', port=6379)
+redis_client = redis.Redis(host='red-cohp9c0l5elc73crq4q0', port=6379)
 
 
 @app.route('/')
